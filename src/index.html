@@ -6,28 +6,30 @@
     <title>Chat Frontend</title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body class="flex flex-row h-screen">
-
+<body class="flex flex-row h-screen bg-gray-200">
     <div class="w-16 flex flex-col justify-between items-center space-y-10 bg-gray-300 p-6">
-        <div class="flex flex-col space-y-4">
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+        <div class="flex flex-col space-y-7">
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
         </div>
         <div class="flex flex-col space-y-4">
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-            <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
+            <a href="#"><div class="w-9 h-9 bg-gray-400 rounded-full"></div></a>
         </div>
     </div>
     <div class="w-64 bg-gray-200 flex flex-col">
         <div class="flex flex-row justify-between p-3 items-center">
             <h1 class="font-bold text-2xl">Inbox</h1>
-            <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
         </div>
         <div class="flex flex-rox justify-start space-x-5 px-3 items-center mt-5">
             <h1 class="font-bold text-xl">Conversations</h1>
@@ -90,13 +92,13 @@
         </div>
 
     </div>
-    <div class="bg-blue-400 flex-auto ">
-        <div class="bg-white w-64 h-screen">
-            <div class="flex flex-row justify-start space-x-5 p-5">
+    <div class="flex-auto shadow-xl flex border bg-white rounded-tl-3xl ">
+        <div class= "w-72 border-r border-gray-00 flex flex-col">
+            <div class="flex flex-row justify-start space-x-5 p-5 flex-none">
                 <a href="#"><div class="w-6 h-6 mt-[5px] bg-gray-400 rounded-full"></div></a>
                 <h1 class="font-bold text-2xl items-center ">You</h1>
             </div>
-            <div class="flex flex-row mt-4 justify-between px-5">
+            <div class="flex flex-row mt-4 justify-between px-5 mb-2">
                 <div class="flex flex-row space-x-3 ">
                     <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
                     <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
@@ -106,19 +108,564 @@
                     <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
                 </div>
             </div>
-            <div class="flex flex-col">
-                <div  class="flex flex-row px-7 mt-10 justify-between items-center" >
-                    <div class="flex flex-row space-x-3 items-center">
-                        <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
-                        <h1>Nicolas Tesla</h1>
+            <div class=" flex-auto overflow-y-auto">
+                <hr class="border-[1.5px] border-gray-100 mt-3">
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer bg-blue-200 selected">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicolas Tesla</h1>
+                        </div>
+                        <h1 class="text-sm">5d</h1>
                     </div>
-                    <h1>5d</h1>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
                 </div>
-                <div class="flex flex-row space-x-3 px-6 text-sm items-center mt-5">
-                    <a href="#"><div class="w-5 h-5 bg-gray-400 rounded-full"></div></a>
-                    <h1>je suis teguera aboubacar</h1>
+                <hr class="border-[1.5px] border-gray-100">
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer ">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                              
+                            <h1 class="font-bold">Fu Lan</h1>
+                        </div>
+                        <h1 class="text-sm">2mth</h1>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>                          
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <hr class="border-[1.5px] border-gray-100">
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">aha</h1>
+                        </div>
+                        <h1 class="text-sm">3mth</h1>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <hr class="border-[1.5px] border-gray-100">
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <div class="flex flex-col py-5 space-y-9 hover:bg-blue-100 hover:text-blue-600 cursor-pointer">
+                    <div  class="flex flex-row px-5 justify-between items-center" >
+                        <div class="flex flex-row space-x-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            <h1 class="font-bold">Nicola and 30 others</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-3 px-6 text-sm items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>   
+                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                        <h1>je suis teguera aboubacar</h1>
+                    </div>
+                </div>
+                <hr class="border-[1.5px] border-gray-100">
+            </div>
+        </div>
+        <div class="h-screen w-[55%] chat shadow-lg border-r border-gray-500">
+            <div class="flex flex-row justify-between px-5 py-2">
+                <div>
+                    <h1 class="font-bold text-xl">Nicolas Tesla</h1>
+                    <span>Add conversation title</span>
+                </div>
+                <div class="flex flex-row space-x-4 items-center">
+                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
                 </div>
             </div>
+            <hr class="border-[1.5px] border-gray-100">
+        </div>
+
+        <div class="flex flex-auto bg-gray-200 py-4 flex-col overflow-auto">
+            <div class="h-[27rem] w-full border-b border-gray-300 px-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="font-semibold text-xl">Conversation details</h2>
+                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                </div>
+                <div class="flex flex-col space-y-2 capitalize">
+                        <div class="space-x-5 flex">  
+                            <h3>Bug Area</h3>
+                            <span>Add</span>
+                        </div>
+                        <div class="space-x-5 flex">  
+                            <h3>category</h3>
+                            <span>Add</span>
+                        </div>
+                        <div class="space-x-5 flex">  
+                            <h3>Customer</h3>
+                            <span>Add</span>
+                        </div>
+                        <div class="space-x-5 flex">  
+                            <h3>Gravity Score</h3>
+                            <span>Add</span>
+                        </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Number attribute</h3>
+                                <span>Add</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Product</h3>
+                                <span>Add</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Rating</h3>
+                                <span>Add</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Test type</h3>
+                                <span>Add</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Topic</h3>
+                                <span>Add</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Urgency</h3>
+                                <span>Add</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>Brand</h3>
+                                <span class="font-semibold">S&T</span>
+                            </div>
+                            <div class="space-x-5 flex">  
+                                <h3>ID</h3>
+                                <span class="font-semibold">44576798768</span>
+                            </div>
+    
+                </div>
+            </div>
+                <div class="mt-6">
+                    <div class="flex justify-between space-x-4 capitalize text-gray-600 px-4">
+                        <h3 class="text-black font-bold">related</h3>
+                        <h3>Customize</h3>
+                    </div>
+                    <div class="px-3">
+                        <div class="bg-white h-[650px] mt-4 px-3 py-5 rounded-md">
+                            <div class="flex flex-row justify-between  items-center font-bold">
+                                <div class="flex space-x-2 text-xl items-center">
+                                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                    <h2>Nicolas Tesla</h2>
+                                </div>
+                                <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                            </div>
+                            <div class="space-y-3">
+                                <div class=" flex space-x-4 items-center mt-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>User</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>3-23O in San carlos ...</h3>
+                                      
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>User</h3>
+                                      <h3>No owner</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>User</h3>
+                                      <h3>nicolas.tesla@...</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Phone</h3>
+                                      <h3>+233 08 78 62</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>User id</h3>
+                                      <h3>12343</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>First seen</h3>
+                                      <h3>3mth ago</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Signed up</h3>
+                                      <h3>4mth ago</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Last seen</h3>
+                                      <h3>9mth ago</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Web sessions</h3>
+                                      <h3>94</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Last seen on an..</h3>
+                                      <h3>Unk..</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Android sessions</h3>
+                                      <h3>0</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Android app...</h3>
+                                      <h3>unk...</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Android device</h3>
+                                      <h3>unkn</h3>
+                                </div>
+                                <div class="flex space-x-4 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                      </svg>   
+                                      <h3>Android os version</h3>
+                                      <h3>un</h3>
+                                </div>
+                            </div>
+                            <div class="flex justify-between font-bold text-gray-500 mt-3">
+                                <span>Seen 544 more</span>
+                                <span>Edit</span>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[650px] mt-4 px-3 py-3 rounded-md">
+                            <h3 class="font-bold">Qualification</h3>
+                            <div class="space-y-3 px-1">
+                                <div class="flex space-x-4 items-center mt-3 ">
+                                    <input type="checkbox" name="qualif" id="qualif" class="appearance-none border-2 h-5 w-5 rounded-full after:content[''] after:bg-[] checked:bg-teal-500">
+                                      <h3>3-23O in San carlos...</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[100px] mt-4 px-3 py-3 rounded-md">
+                            <div class="flex flex-col space-y-7">
+                                <h3 class="font-bold text-lg">Recent page views</h3>
+                                <span class="text-gray-400 font-semibold">No page views</span>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[210px] mt-4 px-3 py-3 rounded-md">
+                            <div>
+                                <h3 class="font-bold text-lg">External profiles</h3>
+                                <div class="flex flex-row space-x-3 mt-3 text-lg items-center">
+                                    <div class="flex space-x-1 items-center">
+                                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                        <h4 class="text-gray-400">Salesforce</h4>
+                                    </div>
+                                    <h3 class="text-gray-700 font-semibold">Nicolas Tesla</h3>
+                                </div>
+                                <div class="flex flex-row space-x-5 mt-3 text-lg items-center">
+                                    <div class="flex space-x-2 items-center">
+                                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                        <h4 class="text-gray-400">HubSpot</h4>
+                                    </div>
+                                    <h3 class="text-gray-700 font-semibold">No contact found</h3>
+                                </div>
+                                <div class="flex flex-row space-x-3 mt-3 text-lg items-center">
+                                    <div class="flex space-x-1 items-center">
+                                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                        <h4 class="text-gray-400">Pipedrive</h4>
+                                    </div>
+                                    <h3 class="text-gray-700 font-semibold">+ Create deal</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[350px] mt-4 px-3 py-3 rounded-md">
+                            <h3 class="font-bold text-gray-900 text-lg">Latest conversations</h3>
+                            <div class="space-y-4 border-b-2 border-gray-300 py-3">
+                                <div class="mt-3 flex space-x-3">
+                                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                    <h3>Open with path</h3>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex space-x-3 items-center">
+                                        <span class="w-[2px] border-yellow-300 border-2 h-5 bg-yellow-300"></span>
+                                        <h3>Pat O'Callaghan this is a test</h3>
+                                    </div>
+                                    <span>13d</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4 border-b-2 border-gray-300 py-3">
+                                <div class="mt-3 flex space-x-3">
+                                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                    <h3>Open with path</h3>
+                                </div>
+                                <div class="flex justify-between">
+                                    <h3>What does the email reply...</h3>
+                                    <span>3mth</span>
+                                </div>
+                            </div>
+                            <div class="space-y-4 py-3">
+                                <div class="mt-3 flex space-x-3">
+                                    <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                                    <h3>Open with Unassigned</h3>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex space-x-3 items-center">
+                                        <span class="w-[2px] border-indigo-800 border-2 h-5 bg-yellow-300"></span>
+                                        <h3>[Article: "Change your dr...</h3>
+                                    </div>
+                                    <span>3mth</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[250px] mt-4 px-3 py-3 rounded-md">
+                            <h3 class="font-bold text-lg">User notes</h3>
+                            <div class="mt-4">
+                                <div class="space-y-3">
+                                    <input type="text" class="w-full h-10 rounded-md border-2 px-2 bg-yellow-100 placeholder:text-gray-400 placeholder:font-bold" placeholder="Add a note">
+                                    <div class="h-10 w-[7rem] rounded-md bg-yellow-200 "> <span class="flex items-center py-[6px] px-2 font-semibold">godis ost</span></div>
+                                    <div class="h-10 w-[7rem] rounded-md bg-yellow-200"><span class="flex space-x-1 py-[6px] px-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                                      </svg>
+                                      <span class="font-semibold">Deadly</span></span>
+                                    </div>
+                                        <h3 class="font-bold text-gray-400 text-lg">See 1 more</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[140px] mt-4 px-3 py-3 rounded-md">
+                            <h3 class="font-bold text-lg">User tags</h3>
+                            <div class="mt-3">
+                                <button class="px-4 py-[3px] border-2 rounded-md font-bold text-gray-400">+ Add tag</button>
+                            </div>
+                            <div class="flex justify-between font-bold text-gray-400 mt-3 text-lg">
+                                <h3>See 28 more</h3>
+                                <span>Edit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         </div>
     </div>
 

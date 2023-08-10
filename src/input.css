@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.selected::before{
+    @apply content-[''] h-[120px] w-[3px] border-blue-500 border-2 absolute top-[135px]
+}
+
+/* .chat::before{
+    @apply content-[''] h-[100vh] border-gray-200 border-[1.8px] absolute top-0
+} */
