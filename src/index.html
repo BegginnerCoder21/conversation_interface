@@ -93,7 +93,7 @@
 
     </div>
     <div class="flex-auto shadow-xl flex border bg-white rounded-tl-3xl ">
-        <div class= "w-72 border-r border-gray-00 flex flex-col">
+        <div class= "w-72 border-r flex-none border-gray-00 flex flex-col">
             <div class="flex flex-row justify-start space-x-5 p-5 flex-none">
                 <a href="#"><div class="w-6 h-6 mt-[5px] bg-gray-400 rounded-full"></div></a>
                 <h1 class="font-bold text-2xl items-center ">You</h1>
@@ -358,11 +358,12 @@
                 <hr class="border-[1.5px] border-gray-100">
             </div>
         </div>
-        <div class="h-screen w-[55%] chat shadow-lg border-r border-gray-500">
-            <div class="flex flex-row justify-between px-5 py-2">
+        <div class="w-[55%] chat shadow-lg border-r border-gray-500 flex flex-col">
+
+            <div class="flex flex-row flex-none justify-between px-5 py-2 border-b h-[80px] border-gray-200">
                 <div>
                     <h1 class="font-bold text-xl">Nicolas Tesla</h1>
-                    <span>Add conversation title</span>
+                    <input type="text" class="focus:outline-none text-sm h-8 placeholder:text-[18px] placeholder:font-[400] border-b-2 border-dashed placeholder:text-gray-500 w-[175px]" placeholder="Add conversation title">
                 </div>
                 <div class="flex flex-row space-x-4 items-center">
                     <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
@@ -372,7 +373,238 @@
                     <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
                 </div>
             </div>
-            <hr class="border-[1.5px] border-gray-100">
+            <div 
+            style="background-image: url('../dist/images/backgroundwats.png')"
+            class="flex-auto overflow-y-auto">
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-4 space-y-1">
+                    <div class="items-center flex space-x-3">
+                        <a href="#"><div class="w-6 h-6 bg-gray-400 rounded-full"></div></a>
+                        <div class="h-10 w-28 rounded-md bg-gray-300 p-3 flex items-center">Hi there</div>
+                    </div>
+                    <div class="flex flex-row items-center ml-10 space-x-2">
+                        <span class="font-semibold text-[16px] text-gray-400">3mth -</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                    </div>
+                </div>
+                <h3 class="font-semibold text-gray-400 text-center">Assigned to Operator inbox 3mth ago</h3>
+                <div class="flex items-center space-x-3 justify-end p-4">
+                    <div class="space-y-2">
+                        <div class="h-10 w-28 rounded-md bg-gray-200 p-3 flex items-center flex-grow">Hey there</div>
+                        <div class="h-10 w-20 rounded-md bg-gray-200 p-3 flex items-center min-w-max">what do you need help me with</div>
+                        <div class="flex justify-end font-semibold text-gray-400">
+                            <span>3mth - Auto reply</span>
+                        </div>
+                    </div>
+                    <a href="#"><div class="w-8 h-8 bg-gray-400 rounded-full"></div></a>
+                </div>
+            </div>
+            </div>
+            <div class="h-40 flex-none px-4">
+                <textarea name="input" id="input" class="rounded-md hover:border-blue-400 focus:outline-blue-400  p-2 border-gray-300 border-2 shadow-md h-full w-full"></textarea>
+            </div>
         </div>
 
         <div class="flex flex-auto bg-gray-200 py-4 flex-col overflow-auto">
@@ -662,6 +894,26 @@
                                 <h3>See 28 more</h3>
                                 <span>Edit</span>
                             </div>
+                        </div>
+                        <div class="bg-white h-[140px] mt-4 px-3 py-3 rounded-md">
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-bold">User segments</h3>
+                                <h4 class="font-semibold text-gray-400">No visible segments</h4>
+                                <div class="flex justify-between font-bold text-gray-400">
+                                    <h3>See 48 more</h3>
+                                    <span>Edit</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bg-white h-[90px] mt-4 px-3 py-3 rounded-md" >
+                            <div>
+                                <h3 class="text-lg font-bold mb-3">Company details</h3>
+                                <span class="font-semibold text-gray-400">No company</span>
+                            </div>
+                        </div>
+                        <div class="bg-white h-[90px] mt-4 px-3 py-3 rounded-md">
+
                         </div>
                     </div>
                 </div>
